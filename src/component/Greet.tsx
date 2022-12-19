@@ -1,16 +1,15 @@
 type GreetProps = {
   name: string;
-  customGreet?: string;
-  isLoggedIn:boolean;
+  messageCount?: string;
+  isLoggedIn: boolean;
 };
 
 export const Greet = (props: GreetProps) => {
-  const { name, customGreet, isLoggedIn } = props;
+  const { name, messageCount = 0, isLoggedIn } = props;
   return (
     <>
-      <h1>
-        {customGreet ? customGreet : "Welcome"} {isLoggedIn ? name : "Guest"}
-      </h1>
+      <h1>Welcome {isLoggedIn ? name : "Guest"}</h1>
+      {isLoggedIn && <h2>You have {messageCount} messages</h2>}
     </>
   );
 };

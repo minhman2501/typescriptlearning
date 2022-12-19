@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Greet, Person, PersonList } from "./component";
+import { Greet, Heading, Oscar, Person, PersonList, Status } from "./component";
 
 function App() {
   const personName = {
@@ -29,9 +29,11 @@ function App() {
   ];
   return (
     <div className="App">
-      <Greet name={"Man"} customGreet={"Lmao rang len"} isLoggedIn={true} />
-      <Person name={personName} job={"Engineer"} />
-      <PersonList names={nameList} />
+      <Greet name="Man" isLoggedIn={true}></Greet>
+      <Status status={"success"} />
+      <Oscar>
+        <Heading>And the Awards goes to Minh Man</Heading>
+      </Oscar>
     </div>
   );
 }
