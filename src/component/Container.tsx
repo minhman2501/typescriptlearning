@@ -1,0 +1,13 @@
+import React from "react";
+
+type ContainerProps = {
+  styles: React.CSSProperties;
+};
+
+export const Container = ({ styles }: ContainerProps) => {
+  return (
+    <div className="lmao" style={styles}>
+      Text goes here
+    </div>
+  );
+};
